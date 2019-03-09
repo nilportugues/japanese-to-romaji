@@ -1,7 +1,7 @@
 # japanese-to-romaji
 
-- run install.sh
-- run example.py
+- run `install.sh` (will install Python3)
+- run `python3 example.py`
 
 ## To do
 
