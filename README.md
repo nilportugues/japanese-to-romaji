@@ -15,3 +15,8 @@
 
 - Scrap http://j-lyric.net/artist/a0592ff/l04aa2b.html :)
 - Build a queue to provide translations in english of every song.
+
+
+## Json
+
+- https://geekytheory.com/como-utilizar-json-en-python
