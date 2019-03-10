@@ -18,18 +18,18 @@ parsed = [[chunk.split('\t')[0], tuple(chunk.split('\t')[1].split(','))] for chu
 romanized = []
 
 ## Parse
-romanizedLine = ""
+romanizedLine = []
 for i in parsed:
     #now for each i[0] do romaji
     conv = kakasi.getConverter()
     result = conv.do(i[0])
-    romanizedLine += " "+result
+    romanizedLine.append(result)
     
     # print(i[0])
     # print(result)
 
 pair = {}
-pair[text] = romanizedLine;
+pair[text] = romanizedLine.join(" ");
     
 romanized.append(pair)
     
