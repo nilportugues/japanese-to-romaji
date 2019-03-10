@@ -29,7 +29,7 @@ for i in parsed:
     # print(result)
 
 pair = {}
-pair[text] = romanizedText;
+pair[text] = romanizedLine;
     
 romanized.append(pair)
     
