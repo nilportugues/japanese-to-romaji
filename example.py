@@ -14,12 +14,17 @@ kakasi.setMode("J","a") # Japanese to ascii, default: no conversion
 text = u"ずっと前から言っていた"
 parsed = [[chunk.split('\t')[0], tuple(chunk.split('\t')[1].split(','))] for chunk in mecab_tagger.parse(text).splitlines()[:-1]]
 
+## Prepare response with dict
+romanized = [[
 
 ## Parse
 for i in parsed:
     #now for each i[0] do romaji
     conv = kakasi.getConverter()
     result = conv.do(i[0])
+    
+    romanized.append({i[0]: result})
+    
     print(i[0])
     print(result)
 
