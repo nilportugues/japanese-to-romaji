@@ -1,6 +1,7 @@
 # coding=utf-8
 import MeCab
 from pykakasi import kakasi,wakati
+import json
 
 ## Prepare the libs
 mecab_tagger = MeCab.Tagger("")
@@ -83,7 +84,7 @@ input = u"""
 """
 
 lines = input.splitlines()
-
+lines = filter(None, lines)
 
 ## Prepare response with dict
 romanized = []
@@ -104,5 +105,6 @@ for line in lines:
     pair[text] = " ".join(romanizedLine);
     romanized.append(pair)
 
+jsonRomanized = json.dumps(romanized, ensure_ascii=False)
 
-print(romanized)
+print(jsonRomanized)
