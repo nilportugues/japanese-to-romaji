@@ -7,8 +7,6 @@
 
 
 - Dockerize and use an `python:3.7.2-slim-stretch`
-- Split a text by sentences (\n)
-- For each sentence, run the program
 - Build an API or Queue system to receive kanji text and return romaji
 
 ## For project
@@ -17,6 +15,3 @@
 - Build a queue to provide translations in english of every song.
 
 
-## Json
-
-- https://geekytheory.com/como-utilizar-json-en-python
