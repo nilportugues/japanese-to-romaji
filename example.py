@@ -15,7 +15,7 @@ text = u"ずっと前から言っていた"
 parsed = [[chunk.split('\t')[0], tuple(chunk.split('\t')[1].split(','))] for chunk in mecab_tagger.parse(text).splitlines()[:-1]]
 
 ## Prepare response with dict
-romanized = [[
+romanized = []
 
 ## Parse
 for i in parsed:
@@ -23,8 +23,12 @@ for i in parsed:
     conv = kakasi.getConverter()
     result = conv.do(i[0])
     
-    romanized.append({i[0]: result})
+    pair = {}
+    pair[i[0]] = result;
     
-    print(i[0])
-    print(result)
+    romanized.append(pair)
+    
+    # print(i[0])
+    # print(result)
 
+print(romanized)
