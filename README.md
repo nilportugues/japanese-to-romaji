@@ -5,6 +5,8 @@
 
 ## To do
 
+
+- Dockerize and use an `python:3.7.2-slim-stretch`
 - Split a text by sentences (\n)
 - For each sentence, run the program
 - Build an API or Queue system to receive kanji text and return romaji
