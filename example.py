@@ -84,7 +84,6 @@ input = u"""
 """
 
 lines = input.splitlines()
-lines = filter(None, lines)
 
 ## Prepare response with dict
 romanized = []
