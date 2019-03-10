@@ -23,7 +23,7 @@ for i in parsed:
     #now for each i[0] do romaji
     conv = kakasi.getConverter()
     result = conv.do(i[0])
-    romanizedLine += result
+    romanizedLine += " "+result
     
     # print(i[0])
     # print(result)
