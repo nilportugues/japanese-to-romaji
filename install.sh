@@ -14,3 +14,4 @@ sudo apt install python3-pip
 
 pip3 install mecab-python3
 pip3 install pykakasi
+pip3 install Flask
