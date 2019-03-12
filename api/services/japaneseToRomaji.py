@@ -103,6 +103,10 @@ class JapaneseToRomaji():
             romanizedLine = romanizedLine.replace(" ga ", "ga ")
             romanizedLine = romanizedLine.replace(" re ", "re ")
 
+            ## Remove multiple spaces
+            romanizedLine = romanizedLine.strip()
+            romanizedLine = " ".join(romanizedLine.split())
+
             pair[text] = romanizedLine.strip()
             romanized.append(pair)
 
