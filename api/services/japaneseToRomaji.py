@@ -42,7 +42,7 @@ class JapaneseToRomaji():
                 if result1 == None:
                     finalResult = result2
                 elif result1 != None and result2 != result1:
-                    finalResult = result1
+                    finalResult = result2
                 else:
                     finalResult = result2
 
@@ -51,34 +51,47 @@ class JapaneseToRomaji():
 
 
             pair = {}
+            romanizedLine.append(" ")
             romanizedLine = " ".join(romanizedLine)
 
             ## Collapse っ
 
             #k
-            romanizedLine = romanizedLine.replace("tsu ka", "kka")
-            romanizedLine = romanizedLine.replace("tsu ke", "kke")
-            romanizedLine = romanizedLine.replace("tsu ki", "kki")
-            romanizedLine = romanizedLine.replace("tsu ko", "kko")
-            romanizedLine = romanizedLine.replace("tsu ku", "kku")
+            romanizedLine = romanizedLine.replace("tsu ka ", "tsuka")
+            romanizedLine = romanizedLine.replace("tsu ke ", "ke")
+            romanizedLine = romanizedLine.replace("tsu ki ", "kki")
+            romanizedLine = romanizedLine.replace("tsu ko ", "kko")
+            romanizedLine = romanizedLine.replace("tsu ku ", "kku")
             #s
-            romanizedLine = romanizedLine.replace("tsu sa", "ssa")
-            romanizedLine = romanizedLine.replace("tsu se", "sse")
-            romanizedLine = romanizedLine.replace("tsu si", "ssi")
-            romanizedLine = romanizedLine.replace("tsu so", "sso")
-            romanizedLine = romanizedLine.replace("tsu su", "ssu")
+            romanizedLine = romanizedLine.replace("tsu sa ", "ssa")
+            romanizedLine = romanizedLine.replace("tsu se ", "sse")
+            romanizedLine = romanizedLine.replace("tsu si ", "ssi")
+            romanizedLine = romanizedLine.replace("tsu so ", "sso")
+            romanizedLine = romanizedLine.replace("tsu su ", "ssu")
             #t
-            romanizedLine = romanizedLine.replace("tsu ta", "tta")
-            romanizedLine = romanizedLine.replace("tsu te", "tte")
-            romanizedLine = romanizedLine.replace("tsu ti", "tti")
-            romanizedLine = romanizedLine.replace("tsu to", "tto")
-            romanizedLine = romanizedLine.replace("tsu tu", "ttu")
+            romanizedLine = romanizedLine.replace("tsu ta ", "tta")
+            romanizedLine = romanizedLine.replace("tsu te ", "tte")
+            romanizedLine = romanizedLine.replace("tsu ti ", "tti")
+            romanizedLine = romanizedLine.replace("tsu to ", "tto")
+            romanizedLine = romanizedLine.replace("tsu tu ", "ttu")
             #p
-            romanizedLine = romanizedLine.replace("tsu pa", "ppa")
-            romanizedLine = romanizedLine.replace("tsu pe", "ppe")
-            romanizedLine = romanizedLine.replace("tsu pi", "ppi")
-            romanizedLine = romanizedLine.replace("tsu po", "ppo")
-            romanizedLine = romanizedLine.replace("tsu pu", "ppu")
+            romanizedLine = romanizedLine.replace("tsu pa ", "ppa")
+            romanizedLine = romanizedLine.replace("tsu pe ", "ppe")
+            romanizedLine = romanizedLine.replace("tsu pi ", "ppi")
+            romanizedLine = romanizedLine.replace("tsu po ", "ppo")
+
+            ## Other fixes, after tsu particle
+            romanizedLine = romanizedLine.replace(" nai ", "nai ")
+            romanizedLine = romanizedLine.replace(" i ", "i ")
+            romanizedLine = romanizedLine.replace(" wa ", "wa ")
+            romanizedLine = romanizedLine.replace(" mo ", "mo ")
+            romanizedLine = romanizedLine.replace(" ta ", "ta ")
+            romanizedLine = romanizedLine.replace(" te ", "te ")
+            romanizedLine = romanizedLine.replace(" ten ", "ten ")
+            romanizedLine = romanizedLine.replace(" ku ", "ku ")
+            romanizedLine = romanizedLine.replace(" ba ", "ba ")
+            romanizedLine = romanizedLine.replace(" ka ", "ka ")
+            romanizedLine = romanizedLine.replace(" ze ", "ze ")
 
             pair[text] = romanizedLine
             romanized.append(pair)
