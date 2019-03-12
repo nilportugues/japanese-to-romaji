@@ -23,5 +23,7 @@ lyrics: //*[@id="HeaderNavi"]/div[1]/table[2]/tbody/tr/td[1]/table[3]/tbody/tr/t
     - Back to 2000s http://ranking.utamap.com/accessranking/weekly_ranking_list.html
     
  - New lyrics added page: http://access.utamap.com/ranking/index-new-lyrics.php
+ 
+ - Aspirar a tener CDs y canciones linkados: http://www.utamap.com/uresuzi/show_cd_detail.php?iid=B07LD23LQL
     
 # English sites... 
