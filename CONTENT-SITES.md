@@ -14,5 +14,7 @@
  
 lyrics: //*[@id="HeaderNavi"]/div[1]/table[2]/tbody/tr/td[1]/table[3]/tbody/tr/td/table/tbody/tr[4]/td
  ```
-
+ - Extra (awesome) info: 
+    - Latests releases: http://sinfo.utamap.com/newcd/index.html
+    
 # English sites... 
