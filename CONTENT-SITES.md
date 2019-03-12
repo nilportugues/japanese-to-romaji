@@ -12,9 +12,7 @@
  
  sung by: //*[@id="HeaderNavi"]/div[1]/table[2]/tbody/tr/td[1]/table[3]/tbody/tr/td/table/tbody/tr[3]/td/table/tbody/tr[3]/td[2]
  
- 
- lyrics: //*[@id="HeaderNavi"]/div[1]/table[2]/tbody/tr/td[1]/table[3]/tbody/tr/td/table/tbody/tr[4]/td
- 
+lyrics: //*[@id="HeaderNavi"]/div[1]/table[2]/tbody/tr/td[1]/table[3]/tbody/tr/td/table/tbody/tr[4]/td
  ```
 
 # English sites... 
