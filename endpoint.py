@@ -1,7 +1,7 @@
 # coding=utf-8
 
 from flask import request
-from flask_restplus import Resource, Api
+from flask_restplus import Resource, Api, fields
 from api import api
 from japaneseToRomaji import JapaneseToRomaji
 
