@@ -15,3 +15,14 @@
 - Build a queue to provide translations in english of every song.
 
 
+
+## 2.1 Documentation: 
+
+ - **Swagger UI**: http://127.0.0.1:5000/
+ - **Swagger.json**: http://127.0.0.1:5000/swagger.json
+ 
+# 3. Framework:
+
+API has been written in Python (2.7) and uses the Flask-RESTful framework.
+ 
+
