@@ -31,18 +31,56 @@ class JapaneseToRomaji():
             for i in parsed:
                 #now for each i[0] do romaji
                 conv = kakasi.getConverter()
+                finalResult = None
 
-
-                ## try to get i[1][7], if not possible, get i[0]
+                result1 = None
                 if len(i) == 2 and len(i[1]) > 8:
-                    result = conv.do(i[1][7])
-                else:
-                    result = conv.do(i[0])
+                    result1 = conv.do(i[1][7])
 
-                romanizedLine.append(result)
+                result2 = conv.do(i[0])
+
+                if result1 == None:
+                    finalResult = result2
+                elif result1 != None and result2 != result1:
+                    finalResult = result1
+                else:
+                    finalResult = result2
+
+
+                romanizedLine.append(finalResult)
+
 
             pair = {}
-            pair[text] = " ".join(romanizedLine); 
+            romanizedLine = " ".join(romanizedLine)
+
+            ## Collapse っ
+
+            #k
+            romanizedLine = romanizedLine.replace("tsu ka", "kka")
+            romanizedLine = romanizedLine.replace("tsu ke", "kke")
+            romanizedLine = romanizedLine.replace("tsu ki", "kki")
+            romanizedLine = romanizedLine.replace("tsu ko", "kko")
+            romanizedLine = romanizedLine.replace("tsu ku", "kku")
+            #s
+            romanizedLine = romanizedLine.replace("tsu sa", "ssa")
+            romanizedLine = romanizedLine.replace("tsu se", "sse")
+            romanizedLine = romanizedLine.replace("tsu si", "ssi")
+            romanizedLine = romanizedLine.replace("tsu so", "sso")
+            romanizedLine = romanizedLine.replace("tsu su", "ssu")
+            #t
+            romanizedLine = romanizedLine.replace("tsu ta", "tta")
+            romanizedLine = romanizedLine.replace("tsu te", "tte")
+            romanizedLine = romanizedLine.replace("tsu ti", "tti")
+            romanizedLine = romanizedLine.replace("tsu to", "tto")
+            romanizedLine = romanizedLine.replace("tsu tu", "ttu")
+            #p
+            romanizedLine = romanizedLine.replace("tsu pa", "ppa")
+            romanizedLine = romanizedLine.replace("tsu pe", "ppe")
+            romanizedLine = romanizedLine.replace("tsu pi", "ppi")
+            romanizedLine = romanizedLine.replace("tsu po", "ppo")
+            romanizedLine = romanizedLine.replace("tsu pu", "ppu")
+
+            pair[text] = romanizedLine
             romanized.append(pair)
 
         return romanized
