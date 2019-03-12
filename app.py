@@ -4,14 +4,21 @@ import settings
 
 from flask import Flask, Blueprint
 from flask_restplus import Swagger
-from japaneseToRomaji
+from api import api
+from endpoint import ns as to_romaji_resource
 
 ## Create the app
 app = Flask(__name__)
-app.register_blueprint(Blueprint('api', __name__))
+Swagger(app)
 
-## Register the resources
-api.add_namespace(languages_namespace)
+## Init API
+blueprint = Blueprint('api', __name__)
+api.init_app(blueprint)
+
+# Add Endpoints to API
+api.add_namespace(to_romaji_resource)
+app.register_blueprint(blueprint)
+
 
 ## Config the app
 app.config['SERVER_NAME'] = settings.FLASK_SERVER_NAME
@@ -21,5 +28,6 @@ app.config['RESTPLUS_MASK_SWAGGER'] = settings.RESTPLUS_MASK_SWAGGER
 app.config['ERROR_404_HELP'] = settings.RESTPLUS_ERROR_404_HELP
 app.config['SWAGGER_UI_ENABLED'] = settings.SWAGGER_UI_ENABLED
 
-## Set up swagger
-Swagger(app)
+
+## Start in dev mode
+app.run(host='0.0.0.0')

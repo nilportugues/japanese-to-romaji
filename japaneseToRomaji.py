@@ -111,6 +111,6 @@ class JapaneseToRomaji():
 
 
 
-toRomaji = JapaneseToRomaji()
-jsonRomanized = toRomaji.convert(input)
-print(jsonRomanized)
+# toRomaji = JapaneseToRomaji()
+# jsonRomanized = toRomaji.convert(input)
+# print(jsonRomanized)
