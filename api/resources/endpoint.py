@@ -2,8 +2,8 @@
 
 from flask import request
 from flask_restplus import Resource, Api, fields
-from api import api
-from japaneseToRomaji import JapaneseToRomaji
+from .api import api
+from services.japaneseToRomaji import JapaneseToRomaji
 
 ## Resource definition
 ns = api.namespace('')

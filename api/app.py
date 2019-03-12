@@ -4,8 +4,8 @@ import settings
 
 from flask import Flask, Blueprint
 from flask_restplus import Swagger
-from api import api
-from endpoint import ns as to_romaji_resource
+from resources.api import api
+from resources.endpoint import ns as to_romaji_resource
 
 ## Create the app
 app = Flask(__name__)
