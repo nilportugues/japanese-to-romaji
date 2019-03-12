@@ -42,7 +42,7 @@ class JapaneseToRomaji():
                 if result1 == None:
                     finalResult = result2
                 elif result1 != None and result2 != result1:
-                    finalResult = result2
+                    finalResult = result1
                 else:
                     finalResult = result2
 
@@ -54,37 +54,45 @@ class JapaneseToRomaji():
             romanizedLine.append(" ")
             romanizedLine = " ".join(romanizedLine)
 
-            ## Collapse っ
+            romanizedLine = romanizedLine.replace(" ha ", " wa ")
 
+            ## Collapse っ
             #k
             romanizedLine = romanizedLine.replace("tsu ka ", "tsuka")
             romanizedLine = romanizedLine.replace("tsu ke ", "ke")
             romanizedLine = romanizedLine.replace("tsu ki ", "kki")
             romanizedLine = romanizedLine.replace("tsu ko ", "kko")
             romanizedLine = romanizedLine.replace("tsu ku ", "kku")
+
+            ## Collapse っ
             #s
             romanizedLine = romanizedLine.replace("tsu sa ", "ssa")
             romanizedLine = romanizedLine.replace("tsu se ", "sse")
             romanizedLine = romanizedLine.replace("tsu si ", "ssi")
             romanizedLine = romanizedLine.replace("tsu so ", "sso")
             romanizedLine = romanizedLine.replace("tsu su ", "ssu")
+
+            ## Collapse っ
             #t
             romanizedLine = romanizedLine.replace("tsu ta ", "tta")
             romanizedLine = romanizedLine.replace("tsu te ", "tte")
             romanizedLine = romanizedLine.replace("tsu ti ", "tti")
             romanizedLine = romanizedLine.replace("tsu to ", "tto")
             romanizedLine = romanizedLine.replace("tsu tu ", "ttu")
+
+            ## Collapse っ
             #p
             romanizedLine = romanizedLine.replace("tsu pa ", "ppa")
             romanizedLine = romanizedLine.replace("tsu pe ", "ppe")
             romanizedLine = romanizedLine.replace("tsu pi ", "ppi")
             romanizedLine = romanizedLine.replace("tsu po ", "ppo")
 
+            ## Dangling letters
+            romanizedLine = romanizedLine.replace(" u ", "u ")
+            romanizedLine = romanizedLine.replace(" i ", "i ")
+
             ## Other fixes, after tsu particle
             romanizedLine = romanizedLine.replace(" nai ", "nai ")
-            romanizedLine = romanizedLine.replace(" i ", "i ")
-            romanizedLine = romanizedLine.replace(" wa ", "wa ")
-            romanizedLine = romanizedLine.replace(" mo ", "mo ")
             romanizedLine = romanizedLine.replace(" ta ", "ta ")
             romanizedLine = romanizedLine.replace(" te ", "te ")
             romanizedLine = romanizedLine.replace(" ten ", "ten ")
@@ -92,8 +100,9 @@ class JapaneseToRomaji():
             romanizedLine = romanizedLine.replace(" ba ", "ba ")
             romanizedLine = romanizedLine.replace(" ka ", "ka ")
             romanizedLine = romanizedLine.replace(" ze ", "ze ")
+            romanizedLine = romanizedLine.replace(" ga ", "ga ")
 
-            pair[text] = romanizedLine
+            pair[text] = romanizedLine.strip()
             romanized.append(pair)
 
         return romanized
