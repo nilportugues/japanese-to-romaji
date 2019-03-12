@@ -23,7 +23,7 @@
  
 # 3. Framework:
 
-API has been written in Python (2.7) and uses the Flask-RESTful framework.
+API has been written in Python 3 and uses the Flask-RESTful framework.
  
 # 4. Example
 
