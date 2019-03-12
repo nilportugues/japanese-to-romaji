@@ -2,15 +2,22 @@
 
 from flask import request
 from flask_restplus import Resource, Api
-from settings import SWAGGER_UI_ENABLED, FLASK_DEBUG
 from api import api
 from japaneseToRomaji import JapaneseToRomaji
 
 ## Resource definition
 ns = api.namespace('')
+
+## Resource description
+resource_request = api.model('Request', {
+    'data': fields.String(description='Japanese text'),
+})
+
+
 @ns.route('/to-romaji')
 class ToRomajiResource(Resource):
 
+   @api.expect(resource_request)
    @api.response(200, 'Success')
    @api.response(400, 'Bad Request')
    @api.response(500, 'Internal Server Error')
