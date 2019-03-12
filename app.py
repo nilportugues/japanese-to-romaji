@@ -1,5 +1,7 @@
 #app.py
 
-from Flask import request
+from flask import Flask
 from japaneseToRomaji
+
+app = Flask(__name__)
 
