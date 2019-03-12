@@ -101,6 +101,7 @@ class JapaneseToRomaji():
             romanizedLine = romanizedLine.replace(" ka ", "ka ")
             romanizedLine = romanizedLine.replace(" ze ", "ze ")
             romanizedLine = romanizedLine.replace(" ga ", "ga ")
+            romanizedLine = romanizedLine.replace(" re ", "re ")
 
             pair[text] = romanizedLine.strip()
             romanized.append(pair)
