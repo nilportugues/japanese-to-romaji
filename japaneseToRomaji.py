@@ -107,7 +107,8 @@ class JapaneseToRomaji():
             pair[text] = " ".join(romanizedLine); 
             romanized.append(pair)
 
-        return json.dumps(romanized, ensure_ascii=False)
+        return romanized
+#        return json.dumps(romanized, ensure_ascii=False)
 
 
 

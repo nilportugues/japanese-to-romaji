@@ -19,7 +19,7 @@ class ToRomajiResource(Resource):
     Converts Kanji, Katakana and Hiragana texts to romanized text
     """
     converter = JapaneseToRomaji()
-    input = request.data
+    input = request.form['data']
     output = converter.convert(input)
 
     return output, 200
