@@ -33,3 +33,6 @@ lyrics: //*[@id="HeaderNavi"]/div[1]/table[2]/tbody/tr/td[1]/table[3]/tbody/tr/t
 # English sites... 
 
 - https://lyricstranslate.com/en/tales-symphonia-ost-almateria-lyrics.html
+
+# Nice FAQs
+- https://lyricstranslate.com/en/faq
