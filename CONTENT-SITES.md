@@ -20,5 +20,7 @@ lyrics: //*[@id="HeaderNavi"]/div[1]/table[2]/tbody/tr/td[1]/table[3]/tbody/tr/t
  - Song index: http://www.utamap.com/indexkasi.html   
  
  - Weekly Ranking: http://ranking.utamap.com/accessranking/weekly_ranking.html
+ 
+ - New lyrics added page: http://access.utamap.com/ranking/index-new-lyrics.php
     
 # English sites... 
