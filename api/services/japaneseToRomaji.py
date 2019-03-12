@@ -21,7 +21,8 @@ class JapaneseToRomaji():
 
         for line in lines:
             text = line
-            parsed = [[chunk.split('\t')[0], tuple(chunk.split('\t')[1].split(','))] for chunk in mecab_tagger.parse(text).splitlines()[:-1]]
+            chunked = [chunk.split('\t')[0], tuple(chunk.split('\t')[1].split(','))]
+            parsed = [chunked for chunk in mecab_tagger.parse(text).splitlines()[:-1]]
 
             ## Parse
             romanizedLine = []
