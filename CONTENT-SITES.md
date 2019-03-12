@@ -17,4 +17,6 @@ lyrics: //*[@id="HeaderNavi"]/div[1]/table[2]/tbody/tr/td[1]/table[3]/tbody/tr/t
  - Extra (awesome) info: 
     - Latests releases: http://sinfo.utamap.com/newcd/index.html
     
+ - Song index: http://www.utamap.com/indexkasi.html   
+    
 # English sites... 
