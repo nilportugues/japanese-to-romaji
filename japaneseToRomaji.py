@@ -83,27 +83,34 @@ input = u"""
 狂おしいほど噛みしめたい
 """
 
-lines = input.splitlines()
+class JapaneseToRomaji():
 
-## Prepare response with dict
-romanized = []
+    def convert(self, input):
+        lines = input.splitlines()
 
-for line in lines:
-    text = line
-    parsed = [[chunk.split('\t')[0], tuple(chunk.split('\t')[1].split(','))] for chunk in mecab_tagger.parse(text).splitlines()[:-1]]
+        ## Prepare response with dict
+        romanized = []
 
-    ## Parse
-    romanizedLine = []
-    for i in parsed:
-        #now for each i[0] do romaji
-        conv = kakasi.getConverter()
-        result = conv.do(i[0])
-        romanizedLine.append(result)
+        for line in lines:
+            text = line
+            parsed = [[chunk.split('\t')[0], tuple(chunk.split('\t')[1].split(','))] for chunk in mecab_tagger.parse(text).splitlines()[:-1]]
 
-    pair = {}
-    pair[text] = " ".join(romanizedLine);
-    romanized.append(pair)
+            ## Parse
+            romanizedLine = []
+            for i in parsed:
+                #now for each i[0] do romaji
+                conv = kakasi.getConverter()
+                result = conv.do(i[0])
+                romanizedLine.append(result)
 
-jsonRomanized = json.dumps(romanized, ensure_ascii=False)
+            pair = {}
+            pair[text] = " ".join(romanizedLine); 
+            romanized.append(pair)
 
+        return json.dumps(romanized, ensure_ascii=False)
+
+
+
+toRomaji = JapaneseToRomaji()
+jsonRomanized = toRomaji.convert(input)
 print(jsonRomanized)
