@@ -26,4 +26,10 @@ lyrics: //*[@id="HeaderNavi"]/div[1]/table[2]/tbody/tr/td[1]/table[3]/tbody/tr/t
  
  - Aspirar a tener CDs y canciones linkados: http://www.utamap.com/uresuzi/show_cd_detail.php?iid=B07LD23LQL
     
+    
+---
+
+
 # English sites... 
+
+- https://lyricstranslate.com/en/tales-symphonia-ost-almateria-lyrics.html
