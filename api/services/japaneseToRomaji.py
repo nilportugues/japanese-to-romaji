@@ -59,7 +59,7 @@ class JapaneseToRomaji():
             ## Collapse っ
             #k
             romanizedLine = romanizedLine.replace("tsu ka ", "tsuka")
-            romanizedLine = romanizedLine.replace("tsu ke ", "ke")
+            romanizedLine = romanizedLine.replace("tsu ke ", "kke")
             romanizedLine = romanizedLine.replace("tsu ki ", "kki")
             romanizedLine = romanizedLine.replace("tsu ko ", "kko")
             romanizedLine = romanizedLine.replace("tsu ku ", "kku")
