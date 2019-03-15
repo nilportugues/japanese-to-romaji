@@ -111,7 +111,42 @@ class JapaneseToRomaji():
             romanizedLine = romanizedLine.replace("u-", "ū")
             
             ## Special characters
-            
+            # Punctionation 
+            # https://en.wikipedia.org/wiki/List_of_Japanese_typographic_symbols
+
+            romanizedLine = romanizedLine.replace("「", "'")
+            romanizedLine = romanizedLine.replace("」", "'")
+            romanizedLine = romanizedLine.replace("『", "\"")
+            romanizedLine = romanizedLine.replace("』", "\"")
+            romanizedLine = romanizedLine.replace("（", "(")
+            romanizedLine = romanizedLine.replace("）", ")")
+            romanizedLine = romanizedLine.replace("〔", "[")
+            romanizedLine = romanizedLine.replace("〕", "]")
+            romanizedLine = romanizedLine.replace("［", "[")
+            romanizedLine = romanizedLine.replace("］", "]")
+            romanizedLine = romanizedLine.replace("｛", "{")
+            romanizedLine = romanizedLine.replace("｝", "}")
+            romanizedLine = romanizedLine.replace("｟", "((")
+            romanizedLine = romanizedLine.replace("｠", "))")
+            romanizedLine = romanizedLine.replace("〈", "<")
+            romanizedLine = romanizedLine.replace("〉", ">")
+            romanizedLine = romanizedLine.replace("《", "")
+            romanizedLine = romanizedLine.replace("》", "")
+            romanizedLine = romanizedLine.replace("【", "")
+            romanizedLine = romanizedLine.replace("】", "")
+            romanizedLine = romanizedLine.replace("〖", "")
+            romanizedLine = romanizedLine.replace("〗", "")
+            romanizedLine = romanizedLine.replace("〘", "")
+            romanizedLine = romanizedLine.replace("〙", "")
+            romanizedLine = romanizedLine.replace("〚", "")
+            romanizedLine = romanizedLine.replace("〛", "")
+            romanizedLine = romanizedLine.replace("。", ".")
+            romanizedLine = romanizedLine.replace("、", ",")
+            romanizedLine = romanizedLine.replace("・", "·")
+            romanizedLine = romanizedLine.replace("゠", "–")
+            romanizedLine = romanizedLine.replace("＝", "—")
+            romanizedLine = romanizedLine.replace("…", "")
+            romanizedLine = romanizedLine.replace("‥", "")            
             
             ## Remove multiple spaces
             romanizedLine = romanizedLine.strip()
