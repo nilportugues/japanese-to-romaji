@@ -103,6 +103,16 @@ class JapaneseToRomaji():
             romanizedLine = romanizedLine.replace(" ga ", "ga ")
             romanizedLine = romanizedLine.replace(" re ", "re ")
 
+            ## Extended letters
+            romanizedLine = romanizedLine.replace("a-", "ā")
+            romanizedLine = romanizedLine.replace("e-", "ē")
+            romanizedLine = romanizedLine.replace("i-", "ī")
+            romanizedLine = romanizedLine.replace("o-", "ō")
+            romanizedLine = romanizedLine.replace("u-", "ū")
+            
+            ## Special characters
+            
+            
             ## Remove multiple spaces
             romanizedLine = romanizedLine.strip()
             romanizedLine = " ".join(romanizedLine.split())
