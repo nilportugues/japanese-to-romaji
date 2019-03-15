@@ -1,3 +1,5 @@
+https://dev.to/kunnendavid/how-to-get-250k-pages-indexed-by-google-57ep
+
 # japanese-to-romaji
 
 - run `install.sh` (will install Python3)
