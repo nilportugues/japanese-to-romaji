@@ -208,5 +208,3 @@ class JapaneseToRomaji():
         return romanized
 
 
-r = JapaneseToRomaji()
-print(r.convert("日本語を書いてください1996 5.99 6AM"))
