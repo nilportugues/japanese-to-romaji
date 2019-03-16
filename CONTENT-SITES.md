@@ -2,6 +2,7 @@
 # Japanese Lyric sites
 
 - https://utaten.com/lyric/DEEN/1985/
+- https://utaten.com/movie/sa18020902/
 
 
 - http://www.utamap.com/index.html
