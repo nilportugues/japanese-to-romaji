@@ -195,6 +195,7 @@ class JapaneseToRomaji():
             
             ## Custom tokens and fixes
             romanizedLine = romanizedLine.replace("**SPACE**", " ")
+            text = text.replace("**SPACE**", " ")
 
             ## Remove multiple spaces
             romanizedLine = romanizedLine.strip()
