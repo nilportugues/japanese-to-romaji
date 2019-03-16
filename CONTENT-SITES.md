@@ -1,6 +1,9 @@
 
 # Japanese Lyric sites
 
+- https://utaten.com/lyric/DEEN/1985/
+
+
 - http://www.utamap.com/index.html
   - Example of song page: http://www.utamap.com/showtop.php?surl=k-190227-022
  ```
