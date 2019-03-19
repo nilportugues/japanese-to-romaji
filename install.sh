@@ -26,3 +26,9 @@ pip3 install Flask
 pip3 install flask-restplus
 pip3 install flask-restful-swagger-2
 pip3 install urllib3==1.22
+
+## Linter
+pip3 install pylint
+
+## Formatter
+pip3 install --upgrade autopep8

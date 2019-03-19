@@ -13,4 +13,3 @@ RESTPLUS_ERROR_404_HELP = False
 
 # Swagger
 SWAGGER_UI_ENABLED = True
-
